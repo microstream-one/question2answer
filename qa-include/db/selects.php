@@ -1493,7 +1493,7 @@ function qa_db_user_points_selectspec($identifier, $isuserid = QA_FINAL_EXTERNAL
 function qa_db_user_rank_selectspec($identifier, $isuserid = QA_FINAL_EXTERNAL_USERS)
 {
 	return array(
-		'columns' => array('rank' => '1+COUNT(*)'),
+		'columns' => array('`rank`' => '1+COUNT(*)'),
 		'source' => '^userpoints WHERE points>COALESCE((SELECT points FROM ^userpoints WHERE userid=' . ($isuserid ? '$' : '(SELECT userid FROM ^users WHERE handle=$ LIMIT 1)') . '), 0)',
 		'arguments' => array($identifier),
 		'arrayvalue' => 'rank',

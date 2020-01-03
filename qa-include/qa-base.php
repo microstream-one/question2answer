@@ -431,6 +431,20 @@ function qa_page_db_fail_handler($type, $errno = null, $error = null, $query = n
 	$pass_failure_error = $error;
 	$pass_failure_query = $query;
 
+	if (defined('DEBUG') and DEBUG) {
+        $included_files = get_included_files();
+        foreach ($included_files as $filename) {
+            echo "{$filename}<br />\n";
+        }
+        echo '<br /><code>';
+        echo $type.'<br /><br />';
+        echo $errno.'<br /><br />';
+        echo $query.'<br /><br />';
+        echo $error;
+        echo '<code>';
+        exit;
+    }
+
 	require_once QA_INCLUDE_DIR . 'qa-install.php';
 
 	qa_exit('error');

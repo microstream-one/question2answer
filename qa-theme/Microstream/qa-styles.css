@@ -724,6 +724,11 @@ blockquote p {
 	line-height: 1.8;
 	overflow: hidden;
 	text-overflow: ellipsis;
+
+	border: 1px #fff solid;
+	margin-top: 3px;
+	height: 45px;
+	border-radius: 5px;
 }
 
 .qam-logged-out .qam-account-handle {
@@ -2114,7 +2119,7 @@ input[type="submit"], button {
 .qa-part-form-activity .qa-uf-user-upvoteds,
 .qa-part-form-activity .qa-uf-user-downvoteds {
 	font-size: 24px;
-	font-weight: 700;
+	font-weight: 400;
 }
 .qa-part-form-activity .qa-uf-user-points,
 .qa-part-form-activity .qa-uf-user-q-posts,
