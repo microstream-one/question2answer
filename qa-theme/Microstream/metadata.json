@@ -1,0 +1,10 @@
+{
+	"name": "Microstream",
+	"description": "",
+	"version": "1.4",
+	"date": "2019-12-05",
+	"author": "r.meier",
+	"author_uri": "",
+	"license": "GPLv2",
+	"min_q2a": "1.7"
+}

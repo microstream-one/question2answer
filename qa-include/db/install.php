@@ -118,6 +118,7 @@ function qa_db_table_definitions()
 			'sessionsource' => 'VARCHAR (16) CHARACTER SET ascii DEFAULT \'\'', // e.g. facebook, openid, etc...
 			'flags' => 'SMALLINT UNSIGNED NOT NULL DEFAULT 0', // see constants at top of /qa-include/app/users.php
 			'wallposts' => 'MEDIUMINT NOT NULL DEFAULT 0', // cached count of wall posts
+            'out_user_id' => 'INT(11) DEFAULT NULL',
 			'PRIMARY KEY (userid)',
 			'KEY email (email)',
 			'KEY handle (handle)',

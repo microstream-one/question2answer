@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Light.eot');
+    src: url('fonts/Whitney-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Whitney-Light.woff2') format('woff2'),
+    url('fonts/Whitney-Light.woff') format('woff'),
+    url('fonts/Whitney-Light.ttf') format('truetype'),
+    url('fonts/Whitney-Light.svg#Whitney-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Medium.eot');
+    src: url('fonts/Whitney-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Whitney-Medium.woff2') format('woff2'),
+    url('fonts/Whitney-Medium.woff') format('woff'),
+    url('fonts/Whitney-Medium.ttf') format('truetype'),
+    url('fonts/Whitney-Medium.svg#Whitney-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Bold.eot');
+    src: url('fonts/Whitney-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Whitney-Bold.woff2') format('woff2'),
+    url('fonts/Whitney-Bold.woff') format('woff'),
+    url('fonts/Whitney-Bold.ttf') format('truetype'),
+    url('fonts/Whitney-Bold.svg#Whitney-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Semibold.eot');
+    src: url('fonts/Whitney-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Whitney-Semibold.woff2') format('woff2'),
+    url('fonts/Whitney-Semibold.woff') format('woff'),
+    url('fonts/Whitney-Semibold.ttf') format('truetype'),
+    url('fonts/Whitney-Semibold.svg#Whitney-Semibold') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Book.eot');
+    src: url('fonts/Whitney-Book.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Whitney-Book.woff2') format('woff2'),
+    url('fonts/Whitney-Book.woff') format('woff'),
+    url('fonts/Whitney-Book.ttf') format('truetype'),
+    url('fonts/Whitney-Book.svg#Whitney-Book') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

@@ -43,7 +43,7 @@ elseif (isset($_GET['qa']) && $_GET['qa'] == 'blob') {
 else {
 	// Otherwise, load the Q2A base file which sets up a bunch of crucial stuff
 	$qa_autoconnect = false;
-	require 'qa-base.php';
+    require_once 'qa-base.php';
 
 	/**
 	 * Determine the request and root of the installation, and the requested start position used by many pages.
