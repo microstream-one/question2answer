@@ -50,33 +50,34 @@ if ($countslugs && !isset($categoryid)) {
 
 function qa_category_nav_to_browse(&$navigation, $categories, $categoryid, $favoritemap)
 {
-	foreach ($navigation as $key => $navlink) {
-		$category = $categories[$navlink['categoryid']];
+    foreach ($navigation as $key => $navlink) {
+        $category = $categories[$navlink['categoryid']];
 
-		if (!$category['childcount']) {
-			unset($navigation[$key]['url']);
-		} elseif ($navlink['selected']) {
-			$navigation[$key]['state'] = 'open';
-			$navigation[$key]['url'] = qa_path_html('categories/' . qa_category_path_request($categories, $category['parentid']));
-		} else
-			$navigation[$key]['state'] = 'closed';
+        if (!$category['childcount']) {
+//			unset($navigation[$key]['url']);
+            $navigation[$key]['url'] = qa_path_html('questions/'.implode('/', array_reverse(explode('/', $category['backpath']))));
+        } elseif ($navlink['selected']) {
+            $navigation[$key]['state'] = 'open';
+            $navigation[$key]['url'] = qa_path_html('categories/' . qa_category_path_request($categories, $category['parentid']));
+        } else
+            $navigation[$key]['state'] = 'closed';
 
-		if (@$favoritemap[$navlink['categoryid']]) {
-			$navigation[$key]['favorited'] = true;
-		}
+        if (@$favoritemap[$navlink['categoryid']]) {
+            $navigation[$key]['favorited'] = true;
+        }
 
-		$navigation[$key]['note'] =
-			' - <a href="'.qa_path_html('questions/'.implode('/', array_reverse(explode('/', $category['backpath'])))).'">'.( ($category['qcount']==1)
-				? qa_lang_html_sub('main/1_question', '1', '1')
-				: qa_lang_html_sub('main/x_questions', number_format($category['qcount']))
-			).'</a>';
+        $navigation[$key]['note'] =
+            ' - <a href="'.qa_path_html('questions/'.implode('/', array_reverse(explode('/', $category['backpath'])))).'">'.( ($category['qcount']==1)
+                ? qa_lang_html_sub('main/1_question', '1', '1')
+                : qa_lang_html_sub('main/x_questions', number_format($category['qcount']))
+            ).'</a>';
 
-		if (strlen($category['content']))
-			$navigation[$key]['note'] .= qa_html(' - ' . $category['content']);
+        if (strlen($category['content']))
+            $navigation[$key]['note'] .= qa_html(' - ' . $category['content']);
 
-		if (isset($navlink['subnav']))
-			qa_category_nav_to_browse($navigation[$key]['subnav'], $categories, $categoryid, $favoritemap);
-	}
+        if (isset($navlink['subnav']))
+            qa_category_nav_to_browse($navigation[$key]['subnav'], $categories, $categoryid, $favoritemap);
+    }
 }
 
 
