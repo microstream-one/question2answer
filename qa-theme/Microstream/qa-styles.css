@@ -969,6 +969,7 @@ blockquote p {
 .qa-favorite-button, .qa-unfavorite-button {
 	background-image: url('images/star.png');
 	background-repeat: no-repeat;
+	background-color: transparent !important;
 	width: 38px;
 	height: 38px;
 	margin: 0;
@@ -976,19 +977,20 @@ blockquote p {
 	-webkit-transition: background-position 0s;
 	transition: background-position 0s;
 }
-.qa-favorite-button:hover, .qa-unfavorite-button:hover {
-	background-color: #f39c12;
-	background-position: center -38px;
-}
-
 .qa-favorite-button {
 	background-color: #ecf0f1;
-	background-position: center top;
+	background-position: 0 0;
+}
+.qa-favorite-button:hover {
+	background-position: 0 -38px;
 }
 
 .qa-unfavorite-button {
 	background-color: #f1c40f;
-	background-position: center bottom;
+	background-position: -38px 0;
+}
+.qa-unfavorite-button:hover {
+	background-position: -38px -38px;
 }
 
 /*------[ q-list ]------*/
