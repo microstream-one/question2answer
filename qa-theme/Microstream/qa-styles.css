@@ -110,8 +110,8 @@ a:hover {
 .qa-main-heading {
 	position: relative;
 	margin: 0 0 5px;
-	padding: 8px 10px;
-	background: #3498db;
+	padding: 9px 10px 8px;
+	background: #34495e;
 	color: #fff;
 }
 h1 {
@@ -1490,7 +1490,7 @@ blockquote p {
 
 /*------[ lists ]------*/
 .qa-part-ranking, .qa-part-nav-list {
-	padding: 20px;
+	/*padding: 20px;*/
 	margin-bottom: 5px;
 	background: #fff;
 	width: 100%;
@@ -1643,23 +1643,25 @@ blockquote p {
 }
 
 .qa-browse-cat-item {
-	font-size: 1.1em;
 	line-height: 1.71429em;
-	border-bottom: 1px solid #e0e0e0;
-	padding: 10px 0;
 	position: relative;
+	margin-bottom:5px;
 }
-.qa-browse-cat-item:last-child {
-	border-bottom: 0 !important;
+.qa-browse-cat-item:hover {
+	background: #3489cc;
 }
 
-.qa-browse-cat-nolink, .qa-browse-cat-link,
-.qa-browse-cat-link:hover, .qa-browse-cat-link:visited {
-	background-color: #e74c3c;
-	display: inline-block;
+.qa-browse-cat-nolink, .qa-browse-cat-link, .qa-browse-cat-link:visited {
+	display: block;
 	color: #fff;
-	padding: 2px 0.6em;
+	font-size: 1.3em;
+	padding: 10px 0.6em;
 	position: relative;
+	font-weight: 400;
+	background: #3498db;
+}
+.qa-browse-cat-link:hover {
+	background: #3489cc;
 }
 
 .qa-browse-cat-nolink {
@@ -1668,23 +1670,9 @@ blockquote p {
 
 .qa-browse-cat-link {
 	cursor: pointer;
-	background-color: #c0392b;
 }
 .qa-browse-cat-link:hover, .qa-browse-cat-link:focus {
 	text-decoration: none;
-	background-color: #d34a3b;
-}
-.qa-browse-cat-link:before {
-	content: "";
-	position: absolute;
-	right: -5px;
-	top: 10px;
-	display: block;
-	width: 0;
-	height: 0;
-	border-top: 5px solid transparent;
-	border-bottom: 5px solid transparent;
-	border-left: 5px solid #c0392b;
 }
 
 .qa-browse-cat-note {
@@ -1692,28 +1680,17 @@ blockquote p {
 	font-size: 0.9em;
 	line-height: 2em;
 	float: right;
+	margin: -35px 10px 0 0;
+	position: relative;
 }
 .qa-browse-cat-note a {
 	display: inline-block;
-	padding: 2px 10px 2px 0.2em;
-	background-color: #2ecc71;
 	color: #fff;
 }
-.qa-browse-cat-note a:before {
-	background-color: #27ae60;
-	content: '\e801';
-	font-family: "fontello";
-	display: inline-block;
-	text-align: center;
-	width: 1.5em;
-	height: 100%;
-	line-height: 2em;
-	margin-right: 5px;
-}
 .qa-browse-cat-note a:hover {
-	background-color: #48d684;
 	text-decoration: none;
 }
+
 .qa-browse-cat-note.qam-cat-note {
 	padding: 5px;
 	margin: 10px 0 0;
