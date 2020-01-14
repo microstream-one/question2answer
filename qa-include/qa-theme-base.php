@@ -641,14 +641,18 @@ class qa_html_theme_base
 	public function nav_link($navlink, $class)
 	{
 		if (isset($navlink['url'])) {
-			$this->output(
-				'<a href="' . $navlink['url'] . '" class="qa-' . $class . '-link' .
-				(@$navlink['selected'] ? (' qa-' . $class . '-selected') : '') .
-				(@$navlink['favorited'] ? (' qa-' . $class . '-favorited') : '') .
-				'"' . (strlen(@$navlink['popup']) ? (' title="' . $navlink['popup'] . '"') : '') .
-				(isset($navlink['target']) ? (' target="' . $navlink['target'] . '"') : '') . '>' . $navlink['label'] .
-				'</a>'
-			);
+            $this->output(
+                '<a href="' . $navlink['url'] . '" class="qa-' . $class . '-link' .
+                (@$navlink['selected'] ? (' qa-' . $class . '-selected') : '') .
+                (@$navlink['favorited'] ? (' qa-' . $class . '-favorited') : '') .
+                '"' . (strlen(@$navlink['popup']) ? (' title="' . $navlink['popup'] . '"') : '') .
+                (isset($navlink['target']) ? (' target="' . $navlink['target'] . '"') : '') . '>' . $navlink['label']);
+
+            if (strlen(@$navlink['extra'])) {
+                $this->output('<span class="qa-' . $class . '-extra">' . $navlink['extra'] . '</span>');
+            }
+
+            $this->output('</a>');
 		} else {
 			$this->output(
 				'<span class="qa-' . $class . '-nolink' . (@$navlink['selected'] ? (' qa-' . $class . '-selected') : '') .

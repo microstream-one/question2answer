@@ -66,14 +66,15 @@ function qa_category_nav_to_browse(&$navigation, $categories, $categoryid, $favo
             $navigation[$key]['favorited'] = true;
         }
 
+        if (strlen($category['content'])) {
+            $navigation[$key]['extra'] = qa_html($category['content']);
+        }
+
         $navigation[$key]['note'] =
             ' - <a href="'.qa_path_html('questions/'.implode('/', array_reverse(explode('/', $category['backpath'])))).'">'.( ($category['qcount']==1)
                 ? qa_lang_html_sub('main/1_question', '1', '1')
                 : qa_lang_html_sub('main/x_questions', number_format($category['qcount']))
             ).'</a>';
-
-        if (strlen($category['content']))
-            $navigation[$key]['note'] .= qa_html(' - ' . $category['content']);
 
         if (isset($navlink['subnav']))
             qa_category_nav_to_browse($navigation[$key]['subnav'], $categories, $categoryid, $favoritemap);

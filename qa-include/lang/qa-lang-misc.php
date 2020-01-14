@@ -21,7 +21,7 @@
 
 return array(
 	'block_ip_button' => 'Block IP address',
-	'browse_categories' => 'Browse categories',
+	'browse_categories' => 'Categories',
 	'captcha_approve_fix' => 'This verification will stop appearing once your account is approved.',
 	'captcha_confirm_fix' => 'To avoid this verification in future, please ^5confirm your email address^6.',
 	'captcha_error' => 'Please complete the anti-spam verification',

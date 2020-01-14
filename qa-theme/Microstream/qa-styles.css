@@ -114,6 +114,9 @@ a:hover {
 	background: #34495e;
 	color: #fff;
 }
+.qa-main-heading .icon-rss {
+	display: none;
+}
 h1 {
 	margin: 0;
 	font-size: 1.4em;
@@ -1648,6 +1651,7 @@ blockquote p {
 	line-height: 1.71429em;
 	position: relative;
 	margin-bottom:5px;
+	background: #3498db;
 }
 .qa-browse-cat-item:hover {
 	background: #3489cc;
@@ -1660,10 +1664,13 @@ blockquote p {
 	padding: 10px 0.6em;
 	position: relative;
 	font-weight: 400;
-	background: #3498db;
 }
-.qa-browse-cat-link:hover {
-	background: #3489cc;
+
+.qa-browse-cat-extra {
+	color: #fff;
+	font-size: 80%;
+	display: block;
+	margin-right: 70px;
 }
 
 .qa-browse-cat-nolink {
