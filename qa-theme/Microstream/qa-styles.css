@@ -1657,7 +1657,7 @@ blockquote p {
 	background: #3489cc;
 }
 
-.qa-browse-cat-nolink, .qa-browse-cat-link, .qa-browse-cat-link:visited {
+.qa-browse-cat-nolink, .qa-browse-cat-link, .qa-browse-cat-link:visited, .qa-browse-cat-link:hover {
 	display: block;
 	color: #fff;
 	font-size: 1.3em;
