@@ -59,8 +59,11 @@ class qa_html_theme extends qa_html_theme_base
 	 */
 	public function head_metas()
 	{
-		$this->output('<meta name="viewport" content="width=device-width, initial-scale=1"/>');
-		parent::head_metas();
+        $this->output('<meta name="viewport" content="width=device-width, initial-scale=1"/>');
+        $this->output('<link rel="shortcut icon" href="/favicon.ico" />');
+        $this->output('<link rel="icon" type="image/png" href="/favicon.png" />');
+        
+        parent::head_metas();
 	}
 
 	/**
