@@ -79,7 +79,6 @@ class qa_html_theme extends qa_html_theme_base
         }
 
         $this->content['css_src'][] = $this->rooturl.'bootstrap.min.css';
-        $this->content['css_src'][] = $this->rooturl.'fonts.css';
         $this->content['css_src'][] = $this->rooturl.'out.css';
 
         parent::head_css();
@@ -282,6 +281,7 @@ class qa_html_theme extends qa_html_theme_base
         $this->output('<div id="out_footer" class="qa-body-wrapper"></div>');
 
 		$this->output('<script src="'.$this->rooturl.$this->js_dir.'/bootstrap_3.3.7.min.js"></script>');
+		$this->output('<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">');
 
 		if (defined('OUT_URL')) {
             $this->output('<script src="'.$this->rooturl.$this->js_dir.'/out.js"></script>');
