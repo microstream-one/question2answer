@@ -11,7 +11,7 @@
 
 .header { width:100%; padding-top:36px; background-repeat:no-repeat; }
 
-.top { color:#fff; background:rgba(8, 24, 73, 0.9); }
+.top { color:#fff; background:rgba(8, 24, 73, 0.9); border-radius:0; }
 .top .logo { float:left; }
 .top .logo .blue { float:left; margin:7px 0 0 25px; }
 .top .logo .text { float:left; margin:12px 0 0 7px; }
