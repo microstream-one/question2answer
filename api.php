@@ -8,7 +8,6 @@ if (empty($_POST)) {
 
 $headers = getallheaders();
 if (!isset($headers['Auth']) or !is_string($headers['Auth'])) {
-    echo '<pre>'; var_dump($headers);exit;
     header($sp.' 401 Unauthorized', true, 401);
     exit;
 }
@@ -46,6 +45,15 @@ if (API_KEY !== $haKey) {
  */
 $qa = $_GET['qa'];
 
+$connect = new mysqli(QA_MYSQL_HOSTNAME, QA_MYSQL_USERNAME, QA_MYSQL_PASSWORD, QA_MYSQL_DATABASE);
+if ($connect->errno) {
+    header($sp.' 500 Internal Server Error', true, 500);
+    header('Content-type: text/json');
+    $response = ['code'=>500, 'message'=>$connect->errno, 'lc'=>__LINE__];
+    echo json_encode($response);
+    exit;
+}
+
 if ($qa == 'create-user') {
     if (!isset($_POST['user']) or !is_array($_POST['user'])) {
         header($sp.' 400 Bad request', true, 400);
@@ -71,15 +79,6 @@ if ($qa == 'create-user') {
 
     if (!$email or !$handle or !$passhash or !$out_user_id) {
         header($sp.' 400 Bad request', true, 400);
-        exit;
-    }
-
-    $connect = new mysqli(QA_MYSQL_HOSTNAME, QA_MYSQL_USERNAME, QA_MYSQL_PASSWORD, QA_MYSQL_DATABASE);
-    if ($connect->errno) {
-        header($sp.' 500 Internal Server Error', true, 500);
-        header('Content-type: text/json');
-        $response = ['code'=>500, 'message'=>$connect->errno, 'lc'=>__LINE__];
-        echo json_encode($response);
         exit;
     }
 
@@ -109,6 +108,48 @@ if ($qa == 'create-user') {
                     $response['error'] = $connect->error;
                 }
             }
+        }
+    }
+
+    header('Content-type: text/json');
+    echo json_encode($response);
+    $connect->close();
+    exit;
+
+} elseif ($qa == 'update-user') {
+    if (!isset($_POST['user']) or !is_array($_POST['user'])) {
+        header($sp.' 400 Bad request', true, 400);
+        exit;
+    }
+    $userData = $_POST['user'];
+
+    if (!isset($userData['email']) or !isset($userData['handle']) or !isset($userData['passhash']) or !isset($userData['out_user_id'])) {
+        header($sp.' 400 Bad request', true, 400);
+        exit;
+    }
+
+    $email = str_replace(' ', '', $userData['email']);
+    $handle = str_replace(['`', '*', '"', "'", '%'], '', $userData['handle']);
+    $passhash = str_replace(' ', '', $userData['passhash']);
+    $out_user_id = intval($userData['out_user_id']);
+    $level = intval($userData['level']);
+    $flags = intval($userData['flags']);
+
+    if (!$out_user_id or !$email or !$handle) {
+        header($sp.' 400 Bad request', true, 400);
+    }
+
+    $query = "UPDATE `qa_users` SET `email` = '{$email}', `handle` = '{$handle}', `level` = {$level}, `flags` = {$flags} WHERE `out_user_id` = {$out_user_id}";
+
+    if ($connect->query($query) === true) {
+        header($sp.' 200 OK', true, 200);
+        $response = ['code'=>200, 'message'=>'User updated'];
+    } else {
+        header($sp.' 500 Internal Server Error', true, 500);
+        $response = ['code'=>500, 'message'=>$connect->errno, 'lc'=>__LINE__];
+        if (DEBUG) {
+            $response['query'] = $query;
+            $response['error'] = $connect->error;
         }
     }
 
