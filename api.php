@@ -8,7 +8,6 @@ if (empty($_POST)) {
 
 $headers = getallheaders();
 if (!isset($headers['Auth']) or !is_string($headers['Auth'])) {
-    echo '<pre>'; var_dump($headers);exit;
     header($sp.' 401 Unauthorized', true, 401);
     exit;
 }

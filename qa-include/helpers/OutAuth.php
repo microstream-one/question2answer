@@ -65,6 +65,9 @@ class OutAuth {
                 $this->_user_id = intval($arr['user_id']);
                 $this->_refer = $arr['refer'];
                 $res = true;
+            } else {
+                $file = QA_BASE_DIR.'/log/OutAuth_'.microtime(false).'.txt';
+                file_put_contents($file, $this->_id.' : '.$this->_hash.' : '.$result);
             }
         }
 
