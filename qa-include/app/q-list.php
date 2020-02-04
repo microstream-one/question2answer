@@ -130,7 +130,7 @@ function qa_q_list_page_content($questions, $pagesize, $start, $count, $sometitl
 		$qa_content['suggest_next'] = $suggest;
 	}
 
-	if (qa_using_categories() && count($navcategories) && isset($categorypathprefix)) {
+	if (qa_using_categories() && is_array($navcategories) && count($navcategories) && isset($categorypathprefix)) {
 		$qa_content['navigation']['cat'] = qa_category_navigation($navcategories, $categoryid, $categorypathprefix, $categoryqcount, $categoryparams);
 	}
 
