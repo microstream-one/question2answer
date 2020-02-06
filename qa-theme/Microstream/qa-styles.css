@@ -1252,7 +1252,7 @@ blockquote p {
 }
 
 .qa-q-item-title {
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 1.125em;
 	line-height: 1.35em;
 	display: block;
@@ -1261,8 +1261,11 @@ blockquote p {
 .qa-q-item-title a {
 	color: #1a6a9b;
 }
-.qa-q-item-title a:hover, .qa-q-item-title a:active, .qa-q-item-title a:focus, .qa-q-item-title a:visited {
+.qa-q-item-title a:hover, .qa-q-item-title a:active, .qa-q-item-title a:focus {
 	color: #3498db;
+}
+.qa-q-item-title a:visited {
+	color: #609;
 }
 .qa-q-item-title:hover .qam-q-list-close-icon {
 	background-color: #c0392b;
