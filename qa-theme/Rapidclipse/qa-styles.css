@@ -198,7 +198,7 @@ th, td {
 
 pre {
 	background-color: #e0e4e5;
-	border-left: 8px solid #3498db;
+	border-left: 8px solid #f88d20;
 	margin: 1em 0;
 	overflow: auto;
 	padding: 0.4em 0.8em;
@@ -217,7 +217,7 @@ code, samp, kbd {
 
 blockquote {
 	background-color: #e0e4e5;
-	border-left: 11px solid #3498db;
+	border-left: 11px solid #f88d20;
 	padding: 1em;
 	margin: 1em 0;
 	overflow-x: auto;
@@ -1038,7 +1038,7 @@ blockquote p {
 }
 
 .qa-a-count {
-	background-color: #3498db;
+	background-color: #f88d20;
 	color: #fff;
 	text-align: center;
 }
@@ -1426,7 +1426,7 @@ blockquote p {
 .qa-page-selected {
 	padding: 5px 10px;
 	margin-bottom: 5px;
-	background: #3498db;
+	background: #f88d20;
 	color: #fff;
 	display: block;
 }
@@ -1837,7 +1837,7 @@ input, textarea, select {
 }
 input:focus, textarea:focus, select:focus {
 	background-color: #fff;
-	border-color: #3498db;
+	border-color: #f88d20;
 	outline: 0;
 }
 input::-moz-focus-inner, textarea::-moz-focus-inner, select::-moz-focus-inner {
@@ -1984,7 +1984,7 @@ input[type="submit"], button {
 	height: 18px;
 	margin-left: 4px;
 	border-radius: 18px;
-	background-color: #3498db;
+	background-color: #f88d20;
 	color: #fff;
 	font-size: 11px;
 	line-height: 18px;
@@ -2116,7 +2116,7 @@ input[type="submit"], button {
 .qa-part-form-activity .qa-uf-user-c-posts,
 .qa-part-form-activity .qa-uf-user-q-votes,
 .qa-part-form-activity .qa-uf-user-a-votes {
-	color: #3498db;
+	color: #f88d20;
 }
 .qa-part-form-activity .qa-uf-user-upvotes,
 .qa-part-form-activity .qa-uf-user-upvoteds {
@@ -3004,7 +3004,7 @@ input[type="submit"], button {
 	background: #2ecc71;
 }
 .qa-sidebar.peter-river {
-	background: #3498db;
+	background: #f88d20;
 }
 .qa-sidebar.amethyst {
 	background: #9b59b6;
@@ -3319,7 +3319,7 @@ input[type="submit"], button {
 .qa-ask-box {
 	padding: 10px 20px;
 	margin-bottom: 5px;
-	background: #3498db;
+	background: #f88d20;
 	color: #fff;
 }
 .qa-ask-box a {
@@ -3450,7 +3450,7 @@ input[type="submit"], button {
 		border-left-color: #4aa3df;
 	}
 	.qam-search-mobile.peter-river.active {
-		background-color: #3498db;
+		background-color: #f88d20;
 	}
 	.qam-search-mobile.amethyst {
 		background-color: #954eb1;
