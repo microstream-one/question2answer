@@ -83,7 +83,7 @@ body {
 	background: #ecf0f1 !important;
 	position: relative;
 	font-family: 'Whitney', sans-serif;
-	color: #34495e;
+	color: #383838;
 }
 body.body-overflow {
 	overflow-y: hidden !important;
@@ -91,20 +91,20 @@ body.body-overflow {
 }
 
 a {
-	color: #2980b9;
+	color: #d57719;
 	text-decoration: none;
 }
 a:active, a:focus {
-	color: #3498db;
+	color: #f88d20;
 	text-decoration: none;
 	outline: 0;
 }
 a:visited {
-	color: #2980b9;
+	color: #f88d20;
 	text-decoration: none;
 }
 a:hover {
-	color: #3498db;
+	color: #f88d20;
 	text-decoration: underline;
 }
 
@@ -112,7 +112,7 @@ a:hover {
 	position: relative;
 	margin: 0 0 5px;
 	padding: 9px 10px 8px;
-	background: #34495e;
+	background: #383838;
 	color: #fff;
 }
 .qa-main-heading .icon-rss {
@@ -210,7 +210,7 @@ pre code {
 }
 
 code, samp, kbd {
-	color: #34495e;
+	color: #383838;
 	font-family: "Courier New",Courier,monospace,sans-serif;
 	text-align: left;
 }
@@ -241,7 +241,7 @@ blockquote p {
 	vertical-align: bottom;
 	width: 100%;
 	height: 33px;
-	border: 1px solid #3498db;
+	border: 1px solid #d57719;
 }
 .qa-search-field:focus {
 	border-color: #e6e6e6;
@@ -265,13 +265,13 @@ blockquote p {
 
 
 .qam-search.turquoise .qa-search {
-	background: #3498db;
+	background: #f88d20;
 }
 .qam-search.turquoise .qa-search-field:focus {
-	border-color: #2c7db2;
+	border-color: #f88d20;
 }
 .qam-search.turquoise .qa-search-button {
-	background-color: #1d73ac;
+	background-color: #d57719;
 }
 
 .qam-search.the-top {
@@ -379,7 +379,7 @@ blockquote p {
 
 #qam-topbar {
 	font-size: 0.875em;
-	background: #3498db;
+	background: #000;
 	min-width: 320px;
 }
 #qam-topbar.fixed {
@@ -464,7 +464,7 @@ blockquote p {
 
 .qa-logo-link:hover {
 	text-decoration: none;
-	color: #23527c;
+	color: #f88d20;
 }
 
 @media (max-width: 767px) {
@@ -494,7 +494,7 @@ blockquote p {
 }
 @media (min-width: 980px) {
 	.qa-logo-link:hover {
-		color: #165077;
+		color: #f88d20;
 	}
 
 	.qa-nav-main {
@@ -537,7 +537,7 @@ blockquote p {
 	content: '\e805';
 }
 .qa-nav-main-hot .qa-nav-main-link.qa-nav-main-selected {
-	color: #165077;
+	color: #f88d20;
 }
 
 .qa-nav-main-unanswered .qa-nav-main-link:before {
@@ -584,7 +584,7 @@ blockquote p {
 }
 .qa-nav-main-link:hover {
 	text-decoration: none;
-	color:#165077;
+	color:#f88d20;
 }
 .qa-nav-main-link:before {
 	font-family: "fontello";
@@ -595,7 +595,7 @@ blockquote p {
 @media (max-width: 979px) {
 	.qa-nav-main-link {
 		padding: 5px 10px;
-		background: rgb(8, 24, 73);
+		background: #000;
 	}
 	.qa-nav-main-link:before {
 		display: inline-block;
@@ -615,7 +615,7 @@ blockquote p {
 	}
 }
 .qa-nav-main-link.qa-nav-main-selected {
-	color: #165077;
+	color: #f88d20;
 }
 
 .qa-nav-sub {
@@ -671,7 +671,7 @@ blockquote p {
 	color: #000;
 }
 .qa-nav-sub-link.qa-nav-sub-selected, .qa-nav-sub-link:visited.qa-nav-sub-selected, .qa-nav-sub-link:hover.qa-nav-sub-selected {
-	background-color: #3498db;
+	background-color: #f88d20;
 	color: #fff;
 }
 
@@ -709,7 +709,7 @@ blockquote p {
 }
 
 .qam-account-items {
-	background-color: #34495e;
+	background-color: #383838;
 	border: 1px #fff solid;
 	display: none;
 	position: absolute;
@@ -721,7 +721,7 @@ blockquote p {
 }
 .qam-account-items input[type="text"], .qam-account-items input[type="password"] {
 	width: 100%;
-	color: #34495e;
+	color: #383838;
 }
 
 .qam-account-handle {
@@ -1127,7 +1127,7 @@ blockquote p {
 
 .qa-vote-up-button, .qa-vote-down-button, .qa-voted-up-button, .qa-voted-down-button, .qa-vote-up-disabled, .qa-vote-down-disabled {
 	text-indent: -9999px;
-	background: url('images/vote-buttons-2.png') no-repeat;
+	background: url('images/vote-buttons-2.png?1') no-repeat;
 	width: 16px;
 	height: 10px;
 	border: none;
@@ -1263,7 +1263,7 @@ blockquote p {
 	color: #1a6a9b;
 }
 .qa-q-item-title a:hover, .qa-q-item-title a:active, .qa-q-item-title a:focus, .qa-q-item-title a:visited {
-	color: #3498db;
+	color: #f88d20;
 }
 .qa-q-item-title:hover .qam-q-list-close-icon {
 	background-color: #c0392b;
@@ -1271,7 +1271,7 @@ blockquote p {
 }
 
 .qam-q-list-close-icon {
-	background-color: #34495e;
+	background-color: #383838;
 	padding: 3px;
 	border-radius: 18px;
 	float: left;
@@ -1416,7 +1416,7 @@ blockquote p {
 	background: #fff;
 	display: block;
 	text-decoration: none;
-	color: #34495e;
+	color: #383838;
 }
 .qa-page-links-item a:hover, .qa-page-links-item a:focus {
 	background: #e67e22;
@@ -1653,10 +1653,10 @@ blockquote p {
 	line-height: 1.71429em;
 	position: relative;
 	margin-bottom:5px;
-	background: #3498db;
+	background: #d57719;
 }
 .qa-browse-cat-item:hover {
-	background: #3489cc;
+	background: #f88d20;
 }
 
 .qa-browse-cat-nolink, .qa-browse-cat-link, .qa-browse-cat-link:visited, .qa-browse-cat-link:hover {
@@ -1889,15 +1889,16 @@ input[type="submit"], button {
 	font-size: 14px;
 	-webkit-transition-duration: 0s;
 	transition-duration: 0s;
-	background: #3498db none;
+	background: #d57719 none;
 	color: #fff;
 }
-.qa-form-tall-button:hover, .qa-form-tall-button:focus,
+.qa-form-tall-button:hover, .qa-form-tall-button
+,
 .qa-form-wide-button:hover, .qa-form-wide-button:focus,
 .qa-form-basic-button:hover, .qa-form-basic-button:focus {
 	border: 0;
 	outline: 0;
-	background-color: #4aa3df;
+	background-color: #f88d20;
 }
 .qa-form-tall-button a, .qa-form-tall-button a:hover,
 .qa-form-wide-button a, .qa-form-wide-button a:hover,
@@ -2134,7 +2135,7 @@ input[type="submit"], button {
 .qa-template-favorites h2 {
 	padding: 10px;
 	margin-bottom: 5px;
-	background: #34495e;
+	background: #383838;
 	color: #fff;
 }
 .qa-template-favorites h2 a {
@@ -2172,7 +2173,7 @@ input[type="submit"], button {
 .qa-suggest-next {
 	padding: 10px;
 	margin-bottom: 5px;
-	background: #3498db;
+	background: #f88d20;
 	color: #fff;
 }
 .qa-suggest-next a {
@@ -2759,7 +2760,7 @@ input[type="submit"], button {
 .qa-c-list-item .qa-form-light-button {
 	padding: 10px 15px;
 	background: #bdc3c7 none center no-repeat;
-	color: #34495e;
+	color: #383838;
 	width: 24px;
 	height: 24px;
 	text-align: center;
@@ -2769,7 +2770,7 @@ input[type="submit"], button {
 	background-color: #d6dadb;
 }
 .qa-c-list-item .qa-form-light-button a, .qa-c-list-item .qa-form-light-button a:hover {
-	color: #34495e;
+	color: #383838;
 }
 .qa-c-list-item .qa-form-light-button-comment {
 	background-image: url('images/icons/comment.png');
@@ -2919,7 +2920,7 @@ input[type="submit"], button {
 	}
 	#qam-sidepanel-toggle.active {
 		opacity: 1;
-		color: #34495e;
+		color: #383838;
 		right: 280px;
 		box-shadow: -5px 0 15px 0 rgba(0, 0, 0, 0.5);
 	}
@@ -2971,7 +2972,7 @@ input[type="submit"], button {
 .qa-sidebar {
 	padding: 20px;
 	margin-bottom: 5px;
-	background: #34495e;
+	background: #383838;
 	color: #fff;
 }
 .qa-sidebar a {
@@ -3009,7 +3010,7 @@ input[type="submit"], button {
 	background: #9b59b6;
 }
 .qa-sidebar.wet-asphalt {
-	background: #34495e;
+	background: #383838;
 }
 
 .qa-activity-count {
@@ -3168,7 +3169,7 @@ input[type="submit"], button {
 }
 
 #out_user_box > div {
-	background:#34495e;
+	background:#383838;
 	text-align:center;
 	font-size:110%;
 	padding:20px 0; color:#fff;
@@ -3180,7 +3181,7 @@ input[type="submit"], button {
 /*------[ footer ]------*/
 .qam-footer-box {
 	padding: 0;
-	background: #34495e;
+	background: #383838;
 	color: #fff;
 	overflow: hidden;
 	margin: 0;
@@ -3242,7 +3243,7 @@ input[type="submit"], button {
 
 .qa-powered {
 	padding: 10px;
-	background: #2c3e50;
+	background: #262626;
 	color: #fff;
 	font-size: 12px;
 	line-height: 12px;
@@ -3463,7 +3464,7 @@ input[type="submit"], button {
 		border-left-color: #3d566e;
 	}
 	.qam-search-mobile.wet-asphalt.active {
-		background-color: #34495e;
+		background-color: #383838;
 	}
 }
 
